@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dashboard Financeiro</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <div class="login-container">
+    <h2>Dashboard Financeiro</h2>
+
+    <div class="input-group">
+      <label for="descricao">Descrição</label>
+      <input type="text" id="descricao" placeholder="Ex: Salário, Conta de luz..." required />
+    </div>
+    <div class="input-group">
+      <label for="valor">Valor (R$)</label>
+      <input type="number" id="valor" placeholder="Digite o valor" required />
+    </div>
+    <button onclick="adicionarTransacao()">Adicionar</button>
+
+    <h3 style="margin-top: 30px; color: #333;">Transações</h3>
+    <ul id="lista-transacoes" style="text-align: left; margin-top: 10px;"></ul>
+
+    <h3 style="margin-top: 30px; color: #333;">Gráficos</h3>
+    <canvas id="graficoPizza" width="300" height="300" style="margin-top: 20px;"></canvas>
+    <canvas id="graficoBarra"
