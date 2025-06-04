@@ -1,0 +1,131 @@
+/* Reset e base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  color: #333;
+}
+
+.login-container {
+  background-color: #ffffffdd; /* leve transparência */
+  padding: 40px 30px;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  width: 100%;
+  max-width: 380px;
+  text-align: center;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+h2 {
+  font-weight: 700;
+  font-size: 28px;
+  color: #3a3a3a;
+  margin-bottom: 30px;
+  letter-spacing: 1.2px;
+}
+
+.input-group {
+  margin-bottom: 25px;
+  text-align: left;
+}
+
+label {
+  font-weight: 600;
+  font-size: 15px;
+  color: #555;
+  display: block;
+  margin-bottom: 8px;
+}
+
+input {
+  width: 100%;
+  padding: 12px 15px;
+  font-size: 16px;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  outline: none;
+  background-color: #fafafa;
+  color: #333;
+}
+
+input:focus {
+  border-color: #667eea;
+  box-shadow: 0 0 8px #667eea88;
+  background-color: #fff;
+}
+
+button {
+  width: 100%;
+  padding: 14px 0;
+  background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+  color: #fff;
+  font-size: 18px;
+  font-weight: 700;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.6);
+  transition: background 0.4s ease, box-shadow 0.3s ease;
+}
+
+button:hover {
+  background: linear-gradient(90deg, #5563d6 0%, #5f3f8a 100%);
+  box-shadow: 0 6px 20px rgba(85, 99, 214, 0.75);
+}
+
+a {
+  color: #667eea;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #4a56c6;
+  text-decoration: underline;
+}
+
+.error-message {
+  margin-top: 20px;
+  padding: 12px 15px;
+  background-color: #ffe6e6;
+  color: #d8000c;
+  font-weight: 600;
+  font-size: 15px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow: 0 0 8px #d8000c88;
+  animation: fadeIn 0.3s ease forwards;
+}
+
+/* Ícone de aviso (usando Unicode) */
+.error-message::before {
+  content: "⚠️";
+  font-size: 20px;
+}
+
+/* Animação suave */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
